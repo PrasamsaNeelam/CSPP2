@@ -21,13 +21,14 @@ public class Solution {
         rootsOfQuadraticEquation(a, b, c);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      a     { parameter_description }
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    static void rootsOfQuadraticEquation(final int a,
+        final int b, final int c) {
         double val = Math.sqrt((b * b) - (4 * a * c));
         double root1 = ((-b) + val) / (2 * a);
         double root2 = ((-b) - val) / (2 * a);
