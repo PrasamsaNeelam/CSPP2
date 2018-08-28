@@ -7,11 +7,9 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-final public class Solution {
+public final class Solution {
     /**
-     * { function_description }.
-     *
-     * @param      args  The arguments
+     * Constructs the object.
      */
     private Solution() {
         /**
@@ -23,7 +21,7 @@ final public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -39,12 +37,11 @@ final public class Solution {
      * @return     { description_of_the_return_value }
      */
     static long power(final int base, final int exponent) {
-    if (exponent == 0) {
+    if (exponent == 0)
         return 1;
-    }
-    else {
+    else
         return base * power(base, exponent - 1);
     }
-    }
 }
+
 
