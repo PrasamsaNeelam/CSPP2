@@ -25,9 +25,9 @@ public class Solution {
 	*/
 	static void rootsOfQuadraticEquation(int a, int b, int c)
 	{
-		double val = Math.sqrt((b*b) - 4*a*c)/(2*a);
-		double root1 = (-b) + val;
-		double root2 = (-b) - val;
+		double val = Math.sqrt((b*b) - 4*a*c);
+		double root1 = ((-b) + val)/(2*a);
+		double root2 = ((-b) - val)/(2*a);
         System.out.println(root1 + "," + root2);
 	}
 }
