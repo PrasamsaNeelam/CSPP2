@@ -8,6 +8,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
+    private Solution() {
+
+    }
     /**
      * { function_description }
      *
