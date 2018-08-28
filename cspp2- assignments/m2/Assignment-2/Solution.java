@@ -7,12 +7,15 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -32,7 +35,8 @@ public class Solution {
      */
     static void rootsOfQuadraticEquation(final int a,
         final int b, final int c) {
-        double val = Math.sqrt((b * b) - (4 * a * c));
+        int k = 4;
+        double val = Math.sqrt((b * b) - (k * a * c));
         double root1 = ((-b) + val) / (2 * a);
         double root2 = ((-b) - val) / (2 * a);
         System.out.println(root1 + " " + root2);
