@@ -35,10 +35,11 @@ final class Solution {
      */
     static void rootsOfQuadraticEquation(final int a,
         final int b, final int c) {
-        int k = 4;
+        final int k = 4;
         double val = Math.sqrt((b * b) - (k * a * c));
         double root1 = ((-b) + val) / (2 * a);
         double root2 = ((-b) - val) / (2 * a);
         System.out.println(root1 + " " + root2);
     }
 }
+
