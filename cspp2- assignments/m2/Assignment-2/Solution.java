@@ -20,14 +20,17 @@ public class Solution {
 		int c = scan.nextInt();
 		rootsOfQuadraticEquation(a, b, c);
 	}
-	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
-	*/
-	static void rootsOfQuadraticEquation(int a, int b, int c)
-	{
-		double val = Math.sqrt((b*b) - 4*a*c);
-		double root1 = ((-b) + val)/(2*a);
-		double root2 = ((-b) - val)/(2*a);
-        System.out.println(root1 + "," + root2);
+	/**
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      b     { parameter_description }
+	 * @param      c     { parameter_description }
+	 */
+	static void rootsOfQuadraticEquation(int a, int b, int c) {
+		double val = Math.sqrt((b * b) - 4 * a * c);
+		double root1 = ((-b) + val)/(2 * a);
+		double root2 = ((-b) - val)/(2 * a);
+        System.out.println(root1 + " " + root2);
 	}
 }
