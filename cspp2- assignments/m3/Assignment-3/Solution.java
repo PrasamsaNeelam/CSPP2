@@ -5,12 +5,15 @@
  */
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
     /**
      * Class for solution.
      */
-public class Solution {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
@@ -24,11 +27,11 @@ public class Solution {
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        System.out.println(gcd(n1,n2));
+        System.out.println(gcd(n1, n2));
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
+    Need to write the gcd function and print the output.
+    */
     /**
      * { function_description }.
      *
@@ -37,7 +40,7 @@ public class Solution {
      *
      * @return     { returns int type }
      */
-    static int gcd(int n1, int n2) {
+    static int gcd(final int n1, final int n2) {
         for (int i = Math.max(n1, n2); i >= 1; i--) {
             if (n1 % i == 0 && n2 % i == 0) {
                 return i;
