@@ -7,7 +7,10 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
@@ -23,8 +26,8 @@ public class Solution {
         int count = 0;
         for (int i = 1; i <= n; i++) {
             int rem;
-            int a = 10;
-            int b = 7;
+            final int a = 10;
+            final int b = 7;
             int val = i;
             do {
                 rem = val % a;
@@ -34,6 +37,6 @@ public class Solution {
                 }
             } while (val > 0);
         }
-        System.out.println(count); 
+        System.out.println(count);
     }
 }
