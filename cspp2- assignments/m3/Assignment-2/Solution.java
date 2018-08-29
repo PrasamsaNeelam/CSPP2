@@ -8,28 +8,32 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
-/* Fill the main function to print the number of 7's between 1 to n*/
+    private Solution() {
+
+    }
 /**
- * { main function }
+ * { main function }.
  *
  * @param      args  The arguments
  */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);  
         int n = s.nextInt();
         int count = 0;
         for (int i = 1; i <= n; i++) {
             int rem;
+            int a = 10;
+            int b = 7;
             int val = i;
-            do{
-                rem = val % 10;
-                val = val / 10;
-                if (rem == 7) {
+            do {
+                rem = val % a;
+                val = val / a;
+                if (rem == b) {
                         count += 1;
                 }
             } while (val > 0);
         }
-        System.out.println(count);      
+        System.out.println(count); 
     }
 }
