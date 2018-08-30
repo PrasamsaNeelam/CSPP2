@@ -17,7 +17,7 @@ public final class Solution {
     /**
      * { var_description }.
      */
-    public static final Scanner s = new Scanner(System.in);
+    public static final Scanner sc = new Scanner(System.in);
     /**
      * Reads a matrix.
      *
@@ -30,13 +30,13 @@ public final class Solution {
         int[][] arr1 = new int[s1][s2];
         for (int i = 0; i < s1; i++) {
             for (int j = 0; j < s2; j++) {
-                arr1[i][j] = s.nextInt();
+                arr1[i][j] = sc.nextInt();
             }
         }
         return arr1;
     }
     /**
-     * { main_function }
+     * { main_function }.
      *
      * @param      args  The arguments
      */
@@ -57,17 +57,16 @@ public final class Solution {
         //      arr2[i][j] = s.nextInt();
         //  }
         // }
-        int s1 = s.nextInt();
-        int s2 = s.nextInt();
+        int s1 = sc.nextInt();
+        int s2 = sc.nextInt();
         int[][] arr1 = readMatrix(s1, s2);
-        int s3 = s.nextInt();
-        int s4 = s.nextInt();
+        int s3 = sc.nextInt();
+        int s4 = sc.nextInt();
         int[][] arr2 = readMatrix(s3, s4);
         int[][] arr = new int[s1][s2];
         if (s1 != s3 && s2 != s4) {
             System.out.println("not possible");
-        }
-        else {
+        } else {
             for (int i = 0; i < s1; i++) {
                 for (int j = 0; j < s2; j++) {
                     arr[i][j] = arr1[i][j] + arr2[i][j];
