@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -40,7 +40,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // int s1 = s.nextInt();
         // int s2 = s.nextInt();
         // int[][] arr1 = new int[s1][s2];
