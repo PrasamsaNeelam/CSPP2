@@ -47,7 +47,10 @@ public class Solution {
         	}
             for (int i = 0; i < s1; i++) {
             	for (int j = 0; j < s2; j++) {
-            		System.out.print(arr[i][j] + " ");
+            		System.out.print(arr[i][j]);
+            		if (j != s2-1) {
+            			System.out.println(" ");
+            		}
             	}
             	System.out.println();
             }  
