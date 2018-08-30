@@ -3,17 +3,23 @@
  * Author: Prasamsa
  * Date: 30 august 2018
  */
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for solution.
  */
 public final class Solution {
     /**
-     * { main_function }
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
+     * { main_function }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int[] arr = new int[size];
@@ -30,3 +36,5 @@ public final class Solution {
         System.out.println(max);
     }
 }
+
+
