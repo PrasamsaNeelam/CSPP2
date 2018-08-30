@@ -1,7 +1,25 @@
+/**
+ * { item_description }.
+ * Author: Prasamsa
+ * Date: 30 august 2018
+ */
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution {
-
+	/**
+	 * { var_description }.
+	 */
 	public static final Scanner s = new Scanner(System.in);
+	/**
+	 * Reads a matrix.
+	 *
+	 * @param      s1    The s 1
+	 * @param      s2    The s 2
+	 *
+	 * @return     { returns int type }
+	 */
 	public static int[][] readMatrix(int s1, int s2){
         int[][] arr1 = new int[s1][s2];
         for (int i = 0; i < s1; i++) {
@@ -11,7 +29,6 @@ public class Solution {
         }
         return arr1;
 	}
-
 	public static void main(String[] args) {
         // int s1 = s.nextInt();
         // int s2 = s.nextInt();
