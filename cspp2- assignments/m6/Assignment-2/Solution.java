@@ -30,7 +30,7 @@ final class Solution {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (a[i][j] < num) {
-                    a[i][j] = num * Math.round(a[i][j] / num1); 
+                    a[i][j] = num * Math.round(a[i][j] / num1);
                 } else {
                     int sum = num * Math.round(a[i][j] / num1);
                     a[i][j] = sum / 2;
@@ -61,7 +61,7 @@ final class Solution {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n - 1; j++) {
                 System.out.print(b[i][j] + " ");
-            } 
+            }
             System.out.println(b[i][n - 1]);
         }
     }
