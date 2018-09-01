@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /**
  * Write a java program to round the
- * elements of a matrix to the nearest 100.
+ * elements of a matrix to the nearest num.
  *
  * @author : Prasamsa
  * Date: 1 September 2018
@@ -15,7 +15,7 @@ final class Solution {
     }
     /**
      * Function to round the
-     * elements of a matrix to the nearest 100.
+     * elements of a matrix to the nearest num.
      *
      * @param      a     Matrix of which the elements to be rounded
      * @param      rows     Number of rows
@@ -23,17 +23,20 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] a, 
+                                final int rows, final int columns) {
+        final int num = 100;
+        final int num1 = 50;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] < 100) {
-                    a[i][j] = 100 * Math.round(a[i][j]/50);
+                if (a[i][j] < num) {
+                    a[i][j] = num * Math.round(a[i][j] / num1);
                 }
                 else {
-                    int sum = 100 * Math.round(a[i][j]/50);
+                    int sum = num * Math.round(a[i][j] / num1);
                     a[i][j] = sum / 2;
-                    if (a[i][j] % 100 != 0) {
-                        a[i][j] = a[i][j] +50;
+                    if (a[i][j] % num != 0) {
+                        a[i][j] = a[i][j] + num1;
                     }
                 }
                 }
