@@ -26,6 +26,11 @@ public final class Solution {
         }
         return false;
     }
+    /**
+     * { function to print all the odd composite numbers }.
+     *
+     * @param      n     { n value }
+     */
     static void oddComposites(final int n) {
     //     int count = 0;
     //     for (int i = 9; i <= n; i++) {
@@ -38,13 +43,13 @@ public final class Solution {
     //             System.out.println(i);
     //     }
     // }
-    for (int i = 9; i <= n; i+= 2) {
+    final int a = 9;
+    for (int i = a; i <= n; i += 2) {
         if (isComposite(i)) {
             System.out.println(i);
         }
     }
 }
-    
     /**
     * main method as driver program.
     * @param args is the parameter for this method
