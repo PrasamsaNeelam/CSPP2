@@ -17,6 +17,7 @@ public final class Solution {
      * Prints the odd composite numbers between 2 and n.
      *
      * @param      n     n value
+     * @return     boolean value
      */
     static boolean isComposite(final int n) {
         for (int i = 2; i < n; i++) {
@@ -60,4 +61,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
