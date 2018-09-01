@@ -62,6 +62,7 @@ final class Solution {
             for (int j = 0; j < n - 1; j++) {
                 System.out.print(b[i][j] + " ");
             }
+ 
             System.out.println(b[i][n - 1]);
         }
     }
