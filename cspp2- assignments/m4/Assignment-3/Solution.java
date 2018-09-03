@@ -15,7 +15,7 @@ public final class Solution {
 
     }
     /**
-     * { main function }.
+     * { main function to read input and to convert binary to decimal }.
      *
      * @param      args  The arguments
      */
@@ -30,7 +30,7 @@ public final class Solution {
         }
     }
     /**
-     * { main_function }.
+     * { function to convert binary to decimal }.
      *
      * @param      str   The string
      *
