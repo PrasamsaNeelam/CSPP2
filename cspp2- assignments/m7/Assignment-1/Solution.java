@@ -15,10 +15,10 @@ class InputValidator {
     /**
      * Constructs the object.
      *
-     * @param      input  The input
+     * @param      input1  The input
      */
-    public InputValidator(final String input) {
-        this.input = input;
+    InputValidator(final String input1) {
+        this.input = input1;
     }
     /**
      * { function to find the length of input }.
