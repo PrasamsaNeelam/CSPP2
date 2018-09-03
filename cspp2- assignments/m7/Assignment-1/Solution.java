@@ -1,10 +1,28 @@
+/**
+ * { Imports the Scanner class }.
+ * @author : Prasamsa
+ * Date: September 3, 2018
+ */
 import java.util.Scanner;
+/**
+ * Class for input validator.
+ */
 class InputValidator
 {
 	String input;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      input  The input
+	 */
 	public InputValidator(String input) {
         this.input = input;
 	}
+	/**
+	 * { function to find the length of input }.
+	 *
+	 * @return     { returns boolean }
+	 */
 	boolean validateData() {
 		final int n = 6;
 		if (input.length() >= n) {
@@ -13,11 +31,20 @@ class InputValidator
 		return false;
 	}
 }
+/**
+ * Class for solution.
+ */
 public class Solution
 {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
 
 	}
+	/**
+	 * { main function to read input and validate input }.
+	 */
 	public static void main(String args[])
     {
     	Scanner s = new Scanner(System.in);
