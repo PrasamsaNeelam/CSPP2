@@ -1,5 +1,5 @@
 /**
- * { To import Scanner class }.
+ * { imports Scanner class }.
  * Author: Prasamsa
  * Date: 31 august 2018
  */
@@ -14,11 +14,8 @@ public final class Solution {
     private Solution() {
 
     }
-/*
-    Do not modify the main function
-    */
     /**
-     * { main_function }.
+     * { main function to read input and to reverse the given string }.
      *
      * @param      args  The arguments
      */
@@ -29,7 +26,7 @@ public final class Solution {
         System.out.println(reverse);
     }
     /**
-     * { function to reverese the given string }.
+     * { function to reverse the given string }.
      *
      * @param      s     { parameter_description: s is the given string }
      *
