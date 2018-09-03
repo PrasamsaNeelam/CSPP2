@@ -36,7 +36,7 @@ class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -44,12 +44,13 @@ public class Solution {
 
     }
     /**
-     * { main function to read input and validate input }.
+     * { function to read the input and validate the data }.
+     * @param       args    The arguments
      */
     public static void main(final String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        InputValidator i = new InputValidator(input);       
+        InputValidator i = new InputValidator(input);      
         System.out.println(i.validateData());
     }
 
