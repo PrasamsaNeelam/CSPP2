@@ -1,5 +1,5 @@
 /**
- * { item_description }.
+ * { Imports the scanner class }.
  * Author: Prasamsa
  * Date: 30 august 2018
  */
@@ -15,7 +15,7 @@ public final class Solution {
 
     }
     /**
-     * { var_description }.
+     * { function to read matrices input values }.
      */
     public static final Scanner S_C = new Scanner(System.in);
     /**
@@ -36,7 +36,7 @@ public final class Solution {
         return arr1;
     }
     /**
-     * { main_function }.
+     * { main funtion to perform matrix addition }.
      *
      * @param      args  The arguments
      */
