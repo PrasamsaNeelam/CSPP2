@@ -1,5 +1,5 @@
 /**
- * { item_description }.
+ * { Imports the scanner class }.
  * Author: Prasamsa
  * Date: 30 august 2018
  */
@@ -15,7 +15,7 @@ public final class Solution {
 
     }
     /**
-     * { main_function }.
+     * { main function to find the maximum element in the array }.
      *
      * @param      args  The arguments
      */
