@@ -162,7 +162,7 @@ public class List {
         list[size - 1] = 0;
         size -= 1;
     } else {
-        System.out.println("Index Out of Bounds Exception");
+        System.out.println("Invalid Position Exception");
     }
 }
 
@@ -312,7 +312,6 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                if (Integer.parseInt(tokens[1])>l.size)
                 System.out.println(l.get(Integer.parseInt(tokens[1])));
                 break;
                 case "contains":
