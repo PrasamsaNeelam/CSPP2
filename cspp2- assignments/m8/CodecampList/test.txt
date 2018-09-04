@@ -1,0 +1,58 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+2
+[5,-1]
+[5,-1,0,99]
+3
+[5,0,99]
+-1
+99
+true
+
+Your Output: 
+2
+[5,-1]
+[5,-1,0,99]
+3
+[5,0,99]
+-1
+99
+true
+
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+[8,12,97]
+4
+Invalid Position Exception
+[8,12,97,11]
+4
+0
+97
+1
+true
+
+Your Output: 
+[8,12,97]
+4
+Index Out of Bounds Exception
+[8,12,97,11]
+4
+0
+97
+1
+-1
+true
+
+----------------------------------------
+Result: 1/2 testcases passed.
+Starting audit...
+Audit done.
+
+
+[master e919c77] "check_style_score -> 1 of 2 passed. style score: 1/1 "
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cspp2- assignments/m8/CodecampList/test.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
