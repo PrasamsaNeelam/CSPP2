@@ -76,7 +76,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        int num = 10;
+        final int num = 10;
         list = new int[num];
         size = 0;
 
@@ -322,3 +322,5 @@ public class List {
         }
     }
 }
+
+
