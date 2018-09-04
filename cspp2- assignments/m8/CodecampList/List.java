@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -38,7 +38,7 @@ public class List {
 
     private int[] list;
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -242,7 +242,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
                 return true;
@@ -276,7 +276,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -317,6 +317,7 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
             }
         }
     }
