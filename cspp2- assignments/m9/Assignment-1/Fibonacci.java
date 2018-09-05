@@ -1,3 +1,8 @@
+/**
+ * { Imports Scanner class }.
+ * @author: Prasamsa
+ * Date: September 5, 2018
+ */
 import java.util.Scanner;
 
 /*
@@ -17,7 +22,10 @@ import java.util.Scanner;
  *
  */
 
-public class Fibonacci {
+/**
+ * Class for fibonacci.
+ */
+public final class Fibonacci {
     /*
      * fib is a static method takes a argument n
      * n is the count of the fibonacci numbers to be generated.
@@ -25,7 +33,14 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    public static List fib(int n) {
+    /**
+     * { function to list the fibonacci elements }.
+     *
+     * @param      n     { number of elements in the list }
+     *
+     * @return     { returns list }
+     */
+    static List fib(final int n) {
         int a = 0;
         int b = 1;
         List list = new List(n);
@@ -40,7 +55,12 @@ public class Fibonacci {
         return list;
     }
 
-	public static void main(String[] args) {
+    /**
+     * { main function to read input and print fibonacci list }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
