@@ -28,16 +28,16 @@ public class Fibonacci {
     public static List fib(int n) {
         int a = 0;
         int b = 1;
-        List l = new List();
-        l.add(a);
-        l.add(b);
+        List list = new List(n);
+        list.add(a);
+        list.add(b);
         for (int i = 0; i < n - 2; i++) {
             int sum = a + b;
             a = b;
             b = sum;
-            l.add(sum);
+            list.add(sum);
         }
-        return l;
+        return list;
     }
 
 	public static void main(String[] args) {
