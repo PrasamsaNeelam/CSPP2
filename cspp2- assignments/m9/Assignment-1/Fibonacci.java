@@ -25,7 +25,7 @@ import java.util.Scanner;
 /**
  * Class for fibonacci.
  */
-public final class Fibonacci {
+    class Fibonacci {
     /*
      * fib is a static method takes a argument n
      * n is the count of the fibonacci numbers to be generated.
@@ -40,7 +40,7 @@ public final class Fibonacci {
      *
      * @return     { returns list }
      */
-    private static List fib(final int n) {
+    static List fib(final int n) {
         int a = 0;
         int b = 1;
         List list = new List(n);
