@@ -40,7 +40,7 @@ public final class Fibonacci {
      *
      * @return     { returns list }
      */
-    static List fib(final int n) {
+    private static List fib(final int n) {
         int a = 0;
         int b = 1;
         List list = new List(n);
