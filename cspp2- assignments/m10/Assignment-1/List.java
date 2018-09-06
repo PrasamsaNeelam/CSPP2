@@ -132,7 +132,7 @@ public class List {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
         resize();
-        add(item);
+        // add(item);
         }
         list[size++] = item;
     }
