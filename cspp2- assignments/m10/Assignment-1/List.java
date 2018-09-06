@@ -9,7 +9,7 @@ import java.util.Scanner;
  * List of .
  */
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /**
      * The goal for the list is to store items.
@@ -72,7 +72,7 @@ public class List {
  * Constructs the object.
  */
     public List() {
-    	final int num = 10;
+        final int num = 10;
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -170,9 +170,9 @@ public class List {
 
     // todo create resize method
     private void resize() {
-    	int[] newlist = new int[list.length * 2];
-    	System.arraycopy(list, 0, newlist, 0, list.length);
-    	list = newlist;
+        int[] newlist = new int[list.length * 2];
+        System.arraycopy(list, 0, newlist, 0, list.length);
+        list = newlist;
     }
 
     /*
@@ -311,7 +311,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -322,10 +322,11 @@ public class List {
      *
      * @return     { returns int type }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -337,13 +338,13 @@ public class List {
      */
     public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
-        	add(items[i]);
+            add(items[i]);
         }
     }
 
      /*
         Inserts the specified element at the specified index
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
         /**
@@ -352,16 +353,16 @@ public class List {
          * @param      index  The index
          * @param      item   The item
          */
-    public void add(final int index, int item) {
-    	if (index >= 0 && index < size) {
-    		for (int i = size; i > index; i--) {
-        	list[i] = list[i - 1];
+    public void add(final int index, final int item) {
+        if (index >= 0) {
+            for (int i = size; i > index; i--) {
+            list[i] = list[i - 1];
         }
         list[index] = item;
         size++;
-    	} else {
-    		System.out.println("Negative Index Exception");
-    	}
+        } else {
+            System.out.println("Negative Index Exception");
+        }
     }
 
     /* Returns the count of occurances of a given item in the list*/
@@ -375,9 +376,9 @@ public class List {
     public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-        	if (list[i] == item) {
-        		count++;
-        	}
+            if (list[i] == item) {
+                count++;
+            }
         }
         return count;
     }
@@ -386,7 +387,7 @@ public class List {
  *
  * @param      args  The arguments
  */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -447,7 +448,8 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
             }
         }
-	}
+    }
 }
