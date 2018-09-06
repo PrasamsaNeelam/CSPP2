@@ -1,3 +1,8 @@
+/**
+ * { Imports Scanner class }.
+ * @author: Prasamsa
+ * Date: September 6, 2018
+ */
 import java.io.BufferedInputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -13,16 +18,31 @@ import java.util.Scanner;
      * Here E is a type parameter, and it will be replaced with 
         actual type when the object got created. 
      */
+    /**
+     * List of .
+     *
+     * @param      <E>   { Generic type }
+     */
 public class List<E> {
     private E[] list;
     private int size;
     //Constructor
+
+    /**
+     * Constructs the object.
+     */
     public List() {
         // Create a variable of the type Object[]
         list = ((E[])new Object[10]);//Object is the base class for all the classes
         size = 0;
     }
     //Overloaded Constructor
+
+    /**
+     * Constructs the object.
+     *
+     * @param      param  The parameter
+     */
     public List(int param) {
         list = ((E[])new Object[param]);
         size = 0;
@@ -35,6 +55,11 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    /**
+     * { function to add item to list }.
+     *
+     * @param      item  The item
+     */
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
@@ -45,6 +70,11 @@ public class List<E> {
 }
     /*Inserts all the elements of specified int 
     array to the end of list*/
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(E[] items) {
         //Write logic for addAll method
         for (int i = 0; i < items.length; i++) {
@@ -58,10 +88,17 @@ public class List<E> {
      * 
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * { function to return size }.
+     *
+     * @return     { returns int type }
+     */
     public int size() {
         return size;
     }
-
+    /**
+     * { function to resize the list }.
+     */
     private void resize() {
         E[] newlist = ((E[])new Object[2 * list.length]);
         System.arraycopy(list, 0, newlist, 0, size);
@@ -87,6 +124,11 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * { function to remove the element in the list }.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         //Write logic for remove method
         if (index >= 0 && index < size) {
@@ -108,6 +150,13 @@ public class List<E> {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * { function to get an element from the list }.
+     *
+     * @param      index  The index
+     *
+     * @return     { returns the element at the index }
      */
     public E get(int index) {
          //Write logic for get method
@@ -137,6 +186,11 @@ public class List<E> {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0) {
             return "[]";
@@ -156,6 +210,13 @@ public class List<E> {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * { function to check whether an item is in the list }.
+     *
+     * @param      item  The item
+     *
+     * @return     { returns boolean }
+     */
     public boolean contains(E item) {
 		//Write logic for contains method
         for (int i = 0; i < size; i++) {
@@ -169,6 +230,13 @@ public class List<E> {
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { returns the index of element }
      */
     public int indexOf(E item) {
        //Write logic for indexOf method
