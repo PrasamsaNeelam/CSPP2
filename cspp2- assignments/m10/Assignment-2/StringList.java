@@ -9,7 +9,7 @@ interface StringListInterface {
 	 public boolean contains(String item);
 	 public int indexOf(String item);
 }
-//Write a StringList class which implements StringListInterface 
+//Write a StringList class which implements StringListInterface
 
 public class StringList implements StringListInterface{
 	//Implement all the methods mentioned to build a ListADT
