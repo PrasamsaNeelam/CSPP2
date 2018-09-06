@@ -238,7 +238,7 @@ public class List {
      */
     public String toString() {
         if(size == 0)
-            return "";
+            return "[]";
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -285,11 +285,15 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
-        for (int i = size; i >= index; i--) {
+    	if (index >= 0) {
+    		for (int i = size; i >= index; i--) {
         	list[i] = list[i - 1];
         }
         list[index] = item;
         size++;
+    	} else {
+    		System.out.println("Negative Index Exception");
+    	}
     }
     
     /* Returns the count of occurances of a given item in the list*/
