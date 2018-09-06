@@ -142,10 +142,11 @@ public class List<E> {
             return "[]";
         } else {
         String str = "[";
-        for (int i = 0; i < size - 1; i++) {
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
             str += list[i] + ",";
         }
-        str += "]";
+        str += list[i] + "]";
        return str;
     }
 }
