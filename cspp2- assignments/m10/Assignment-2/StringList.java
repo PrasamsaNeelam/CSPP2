@@ -1,7 +1,6 @@
  //An interface for ListADT of strings
 import java.util.Arrays;
-interface StringListInterface
-{
+interface StringListInterface {
 	 public void add(String item);
 	 public void addAll(String items[]);
 	 public String get(int index);
@@ -123,10 +122,18 @@ public class StringList implements StringListInterface{
      * 
      * The method returns void (nothing)
      */
-    public void add(String item) {
+    private void resize() {
+        String[] newlist = new String[2 * list.length];
+        System.arraycopy(list, 0, newlist, 0, size);
+        list = newlist;
+    }
+
+    public void add(final String item) {
         //Inserts the specified element at the end of the list.
-        list[size] = item;
-        size++;  
+        if (size == list.length) {
+            resize();
+        }
+        list[size++] = item;
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
