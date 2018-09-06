@@ -218,12 +218,11 @@ public class StringList implements StringListInterface{
     public String toString() {
         String str = "[";
         String str1 = ",";
-        for (int i = 0; i < size; i++) {
-            if (i < size - 1) {
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
                 str = str + list[i] + str1;
             }
             str = str + list[i] + "]";
-        }
         return str;
     }
     
