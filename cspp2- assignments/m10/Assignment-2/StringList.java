@@ -178,7 +178,7 @@ public class StringList implements StringListInterface{
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             System.out.println("Invalid Position Exception");
         } else {
         for (int i = index; i < size -1; i++) {
@@ -227,6 +227,9 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
+        if (size == 0) {
+            return "[]";
+        } else {
         String str = "[";
         String str1 = ",";
         int i = 0;
@@ -236,6 +239,7 @@ public class StringList implements StringListInterface{
             str = str + list[i] + "]";
         return str;
     }
+}
     
     /*
      * Contains return true if the list has
