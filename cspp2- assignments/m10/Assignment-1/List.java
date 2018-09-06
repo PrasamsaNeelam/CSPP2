@@ -132,10 +132,8 @@ public class List {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
         resize();
-        add(item); 
-        } else {
-            list[size + 1] = item;
         }
+        list[size + 1] = item;
     }
 
     /**
@@ -356,7 +354,7 @@ public class List {
          */
     public void add(final int index, int item) {
     	if (index >= 0) {
-    		for (int i = size; i >= index; i--) {
+    		for (int i = size; i > index; i--) {
         	list[i] = list[i - 1];
         }
         list[index] = item;
