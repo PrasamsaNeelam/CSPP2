@@ -289,7 +289,7 @@ public class List {
         	list[i] = list[i - 1];
         }
         list[index] = item;
-        size += 1;
+        size++;
     }
     
     /* Returns the count of occurances of a given item in the list*/
