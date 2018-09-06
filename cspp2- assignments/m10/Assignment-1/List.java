@@ -353,7 +353,7 @@ public class List {
          * @param      item   The item
          */
     public void add(final int index, int item) {
-    	if (index >= 0) {
+    	if (index >= 0 && index < size) {
     		for (int i = size; i > index; i--) {
         	list[i] = list[i - 1];
         }
