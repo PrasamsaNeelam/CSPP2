@@ -153,8 +153,8 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		for ( int i = 0; i < size; i++) {
-            if (item == list[i]) {
+		for (int i = 0; i < size; i++) {
+            if (item.equals(list[i])) {
                 return true;
             }
         }
