@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -37,7 +37,6 @@ public class List {
      * { to declare a int[]}.
      */
     private int[] list;
-
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -68,7 +67,7 @@ public class List {
 
     private int size;
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
@@ -122,7 +121,6 @@ public class List {
      * @return     { return value is the size of the list }
      */
     public int size() {
-        // replace the code below to implement the size method
         return size;
     }
 
