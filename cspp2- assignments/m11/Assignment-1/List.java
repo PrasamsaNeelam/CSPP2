@@ -37,7 +37,7 @@ public class List {
      * { to declare a int[]}.
      */
     private int[] list;
-    
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -76,7 +76,8 @@ public class List {
      * Constructs the object.
      */
     public List() {
-        list = new int[20];
+        final int twenty = 20;
+        list = new int[twenty];
         size = 0;
 
         // what are the two variables to be initialized here? think about the
@@ -88,9 +89,8 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-
     }
-    
+
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
