@@ -269,9 +269,10 @@ public class List {
       */
     public void removeAll(final int[] newArray) {
         for (int i : newArray) {
-            remove(i);
+            for (int j = 0; j < newArray.length; j++) {
+                remove(j);
+            }
         }
-        size = 0;
     }
     /*
     Returns a list object containing elements, including startIndex and
