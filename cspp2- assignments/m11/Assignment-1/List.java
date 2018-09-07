@@ -41,7 +41,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -103,7 +103,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size++] = item;
     }
@@ -143,12 +143,12 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        if (index >=0 && index <size) {
-            for (int i = index; i < size -1; i++) {
-                list[i] = list[i+1];
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
             }
             size--;
         } else {
@@ -172,15 +172,13 @@ public class List {
      *
      * @return     { return value is the element in the index value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
-        if (index >=0 && index < size) {
+        if (index >= 0 && index < size) {
             return list[index];
         } else {
             return -1;
         }
-
-        
     }
 
     /*
@@ -213,7 +211,7 @@ public class List {
         }
         str = str + list[i] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -226,9 +224,9 @@ public class List {
      *
      * @return     { return value is the boolean}
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
-        for (int i =0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return true;
             }
@@ -246,7 +244,7 @@ public class List {
      *
      * @return     { returns the index value of the given item }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -256,29 +254,29 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**
      * Adds all.
      *
      * @param      newArray  The new array
      */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
      /**
       * Removes all.
       *
       * @param      newArray  The new array
       */
-     public void removeAll(int[] newArray) {
+     public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (list[j] == newArray[i]) {
@@ -291,7 +289,7 @@ public class List {
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -303,7 +301,7 @@ public class List {
      *
      * @return     { return value is a list }
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
     // write the logic for subList
         List newlist = new List();
         if (start > end || start < 0 || end < 0 || start == end || end > size) {
@@ -326,7 +324,7 @@ public class List {
      *
      * @return     { return value is of  boolean type}.
      */
-    public boolean equals(List newlist ) {
+    public boolean equals(final List newlist) {
     // Replace the code below
     if (Arrays.equals(newlist.list, list)) {
         return true;
@@ -352,7 +350,7 @@ public class List {
      * @param      args  The arguments
      */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
