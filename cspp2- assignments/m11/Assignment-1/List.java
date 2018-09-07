@@ -1,3 +1,8 @@
+/**
+ * { Imports Scanner class }.
+ * @author: Prasamsa
+ * Date: September 7, 2018
+ */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
