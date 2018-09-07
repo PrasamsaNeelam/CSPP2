@@ -73,7 +73,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         
-        list = new int[10];
+        list = new int[20];
         size = 0;
 
     }
