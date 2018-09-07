@@ -405,7 +405,7 @@ public class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         String[] arrstring3 = tokens[1].split(",");
                         List object = l.subList(Integer.parseInt(arrstring3[0]),
@@ -415,7 +415,6 @@ public class List {
                         }
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
