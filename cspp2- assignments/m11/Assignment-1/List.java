@@ -278,8 +278,9 @@ public class List {
      public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
-                if (list[i] == newArray[j]) {
-                    remove(i);
+                if (list[j] == newArray[i]) {
+                    remove(j);
+                    j--;
                 }
             }
         }
