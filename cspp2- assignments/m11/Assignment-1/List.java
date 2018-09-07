@@ -340,9 +340,8 @@ public class List {
      */
     public void clear() {
     // write the logic for clear.
-    for (int i = 0; i < size; i++) {
-        remove(i);
-    }
+        removeAll(list);
+        size = 0;
     }
     /**
      * { main function}.
