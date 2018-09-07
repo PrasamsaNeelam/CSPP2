@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -233,15 +234,11 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List newList ) 
-    {
-    	for (int i = 0; i < list.length; i++) {
-    		if (newList.equals(list[i])) {
-        	return true;
-        }
-
+    public boolean equals(List newList ) {
+    	if (Arrays.equals(newList.list, list)) {
+            return true;
     	}
-        return false;
+    return false;
     }
     /*
     * Removes all the elements from list
