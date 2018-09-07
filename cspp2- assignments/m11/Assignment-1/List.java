@@ -270,7 +270,9 @@ public class List {
     public void removeAll(final int[] newArray) {
         for (int i : newArray) {
             for (int j = 0; j < newArray.length; j++) {
-                remove(j);
+                if (i == list[j]) {
+                    remove(j);
+                }
             }
         }
     }
