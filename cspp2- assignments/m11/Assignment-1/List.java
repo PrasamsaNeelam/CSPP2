@@ -268,7 +268,7 @@ public class List {
       * @param      newArray  The new array
       */
     public void removeAll(final int[] newArray) {
-        for (int i = 0; i < newArray.length; i++) {
+        for (int i : newArray) {
             remove(i);
         }
         size = 0;
@@ -410,8 +410,9 @@ public class List {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
-                    if (object != null)
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 }
                 case "equals":
