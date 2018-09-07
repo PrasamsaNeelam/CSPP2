@@ -235,9 +235,12 @@ public class List {
     */
     public boolean equals(List newList ) 
     {
-        if (newList.equals(list)) {
+    	for (int i = 0; i < list.length; i++) {
+    		if (newList.equals(list[i])) {
         	return true;
         }
+
+    	}
         return false;
     }
     /*
