@@ -9,18 +9,18 @@ import java.util.Arrays;
  */
 class Set {
     /**
-     * { declaration of set }
+     * { declaration of set }.
      */
     private int[] set;
     /**
-     * { declarartion of size }
+     * { declarartion of size }.
      */
     private int size;
     /**
      * Constructs the object.
      */
     Set() {
-        int num = 10;
+        final int num = 10;
         set = new int[num];
         size = 0;
     }
@@ -268,6 +268,8 @@ public final class Solution {
     }
 }
 }
+
+
 
 
 
