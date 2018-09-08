@@ -29,7 +29,7 @@ class Set {
      *
      * @param      capacity  The capacity
      */
-    Set(int capacity) {
+    Set(final int capacity) {
         set = new int[capacity];
         size = 0;
     }
@@ -102,7 +102,7 @@ class Set {
         return str;
     }
     /**
-     * { function_description }
+     * { function to add }.
      *
      * @param      item  The item
      */
@@ -148,7 +148,7 @@ class Set {
         Set fset = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < set1.size; j++) {
-                if(set[i] == set1.get(j)) {
+                if (set[i] == set1.get(j)) {
                     fset.add(set[i]);
                 }
             }
@@ -191,9 +191,9 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        
+
     }
-    
+
     /**
      * main function to execute test cases.
      *
@@ -258,7 +258,8 @@ public final class Solution {
                 // intArray = intArray(tokens[2]);
                 // //changed from t.add(intArray);
                 // t.add(intArray[2]);
-                // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                // System.out.println(Arrays.deepToString
+                // (s.cartesianProduct(t)));
                 // break;
                 default:
                 break;
