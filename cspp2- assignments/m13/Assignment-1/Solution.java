@@ -13,7 +13,7 @@ class Set {
     /**
      * Constructs the object.
      */
-    public Set() {
+    Set() {
         set = new int[10];
         size = 0;
     }
