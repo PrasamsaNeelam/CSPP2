@@ -46,17 +46,29 @@ class Set {
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
-
+    /**
+     * { function_description }
+     */
     private void resize() {
         int[] newset = new int[set.length * 2];
         System.arraycopy(set, 0, newset, 0, set.length);
         set = newset;
     }
-
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         for (int i = 0; i < set.length; i++) {
             if (set[i] == item) {
@@ -65,7 +77,11 @@ class Set {
         }
         return false;
     }
-
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String print() {
         if (size == 0) {
             return "{}";
@@ -78,7 +94,11 @@ class Set {
         str += set[i] + "}";
         return str;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         if (size == set.length) {
             resize();
@@ -86,7 +106,11 @@ class Set {
             set[size++] = item;
         }
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      array  The array
+     */
     public void add(final int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (size == set.length) {
@@ -96,15 +120,23 @@ class Set {
             }
         }
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(final int index) {
-        if (index < 0 && index > size) {
-            return -1;
-        }
         return set[index];
-
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      set1  The set 1
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set intersection(final Set set1) {
         Set fset = new Set();
         for (int i = 0; i < size; i++) {
@@ -116,7 +148,13 @@ class Set {
         }
         return fset;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      array  The array
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set retainAll(final int[] array) {
         Set fset = new Set();
         for (int i = 0; i < array.length; i++) {
@@ -222,5 +260,6 @@ public final class Solution {
     }
 }
 }
+
 
 
