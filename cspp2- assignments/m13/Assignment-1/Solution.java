@@ -8,13 +8,20 @@ import java.util.Arrays;
  * Date: September 8, 2018
  */
 class Set {
+    /**
+     * { declaration of set }
+     */
     private int[] set;
+    /**
+     * { declarartion of size }
+     */
     private int size;
     /**
      * Constructs the object.
      */
     Set() {
-        set = new int[10];
+        int num = 10;
+        set = new int[num];
         size = 0;
     }
     /**
@@ -22,7 +29,7 @@ class Set {
      *
      * @param      capacity  The capacity
      */
-    public Set(int capacity) {
+    Set(int capacity) {
         set = new int[capacity];
         size = 0;
     }
@@ -47,7 +54,7 @@ class Set {
                             .toArray();
     }
     /**
-     * { function_description }
+     * { function to resize the set }.
      */
     private void resize() {
         int[] newset = new int[set.length * 2];
@@ -55,19 +62,19 @@ class Set {
         set = newset;
     }
     /**
-     * { function_description }
+     * { function to return size of set }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns int type }
      */
     public int size() {
         return size;
     }
     /**
-     * { function_description }
+     * { function to check whether the given item is present }.
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns boolean }
      */
     public boolean contains(final int item) {
         for (int i = 0; i < set.length; i++) {
@@ -78,9 +85,9 @@ class Set {
         return false;
     }
     /**
-     * { function_description }
+     * { function to print set }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns string }
      */
     public String print() {
         if (size == 0) {
@@ -107,7 +114,7 @@ class Set {
         }
     }
     /**
-     * { function_description }
+     * { function to add an array to set }.
      *
      * @param      array  The array
      */
@@ -121,21 +128,21 @@ class Set {
         }
     }
     /**
-     * { function_description }
+     * { function to get an element at the index }.
      *
      * @param      index  The index
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns int }
      */
     public int get(final int index) {
         return set[index];
     }
     /**
-     * { function_description }
+     * { function to intersect the sets }.
      *
      * @param      set1  The set 1
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns set }
      */
     public Set intersection(final Set set1) {
         Set fset = new Set();
@@ -149,11 +156,11 @@ class Set {
         return fset;
     }
     /**
-     * { function_description }
+     * { function to retain all }.
      *
      * @param      array  The array
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns a set }
      */
     public Set retainAll(final int[] array) {
         Set fset = new Set();
