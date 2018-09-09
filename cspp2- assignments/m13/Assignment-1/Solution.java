@@ -253,11 +253,10 @@ public final class Solution {
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
-                s.add(intArray[1]);
+                s.add(intArray);
                 intArray = intArray(tokens[2]);
-                t.add(intArray[2]);
-                System.out.println(Arrays.deepToString
-                (s.cartesianProduct(t)));
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
                 default:
                 break;
