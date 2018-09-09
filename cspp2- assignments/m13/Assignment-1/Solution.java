@@ -187,7 +187,7 @@ public final class Solution {
 
     }
     /**
-     * { function }
+     * { function }.
      *
      * @param      s     { parameter_description }
      *
