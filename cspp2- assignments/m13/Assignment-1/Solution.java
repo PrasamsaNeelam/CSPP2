@@ -99,7 +99,7 @@ class Set {
         if (size == set.length) {
             resize();
         }
-        if(!contains(item)) {
+        if (!contains(item)) {
         set[size++] = item;
     }
     }
@@ -142,10 +142,10 @@ class Set {
      */
     public Set retainAll(final int[] array) {
         Set fset = new Set();
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if (array[i] == set[j]) {
-                    fset.add(set[j]);
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (set[i] == array[j]) {
+                    fset.add(array[j]);
                 }
             }
         }
