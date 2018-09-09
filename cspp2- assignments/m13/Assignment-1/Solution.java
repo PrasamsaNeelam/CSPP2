@@ -98,9 +98,8 @@ class Set {
     public void add(final int item) {
         if (size == set.length) {
             resize();
-        } else {
-            set[size++] = item;
         }
+        set[size++] = item;
     }
     /**
      * { function to add an array to set }.
@@ -110,11 +109,9 @@ class Set {
     public void add(final int[] array) {
         for (int i = 0; i < array.length; i++) {
             add(array[i]);
+        }
     }
-    }
-    public int get(final int index) {
-        return set[index];
-    }
+
     /**
      * { function to intersect the sets }.
      *
@@ -126,8 +123,8 @@ class Set {
         Set fset = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < set1.size; j++) {
-                if (set[i] == set1.get(j)) {
-                    fset.add(set[i]);
+                if (set[i] == set1.set[j]) {
+                    fset.add(set1.set[j]);
                 }
             }
         }
