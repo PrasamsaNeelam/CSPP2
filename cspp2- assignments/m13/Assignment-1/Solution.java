@@ -99,8 +99,11 @@ class Set {
         if (size == set.length) {
             resize();
         }
+        if(!contains(item)) {
         set[size++] = item;
     }
+    }
+
     /**
      * { function to add an array to set }.
      *
