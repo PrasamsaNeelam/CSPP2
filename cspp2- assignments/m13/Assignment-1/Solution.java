@@ -78,7 +78,7 @@ class Set {
      *
      * @return     { returns string }
      */
-    public String print() {
+    public String toString() {
         if (size == 0) {
             return "{}";
         }
