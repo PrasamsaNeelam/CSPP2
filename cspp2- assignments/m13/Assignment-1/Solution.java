@@ -41,7 +41,7 @@ class Set {
      *
      * @return     { int array from the given string }
      */
-    
+
     /**
      * { function to resize the set }.
      */
@@ -151,7 +151,13 @@ class Set {
         }
         return fset;
     }
-
+    /**
+     * { function to find the cartesian product of given sets }.
+     *
+     * @param      items  The items
+     *
+     * @return     { returns 2D array }
+     */
     public int[][] cartesianProduct(final Set items) {
         int[][] intersection = new int[size * items.size][2];
         if (size == 0 || items.size == 0) {
@@ -180,13 +186,12 @@ public final class Solution {
     private Solution() {
 
     }
-
     /**
-     * { function to get an element at the index }.
+     * { function }
      *
-     * @param      index  The index
+     * @param      s     { parameter_description }
      *
-     * @return     { returns int }
+     * @return     { description_of_the_return_value }
      */
     public static int[] intArray(final String s) {
         String input = s;
