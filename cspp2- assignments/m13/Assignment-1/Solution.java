@@ -84,7 +84,7 @@ class Set {
         }
         String str = "{";
         int i = 0;
-        for (i = 0; i < size; i++) {
+        for (i = 0; i < size - 1; i++) {
             str += set[i] + ",";
         }
         str += set[i] + "}";
@@ -109,20 +109,9 @@ class Set {
      */
     public void add(final int[] array) {
         for (int i = 0; i < array.length; i++) {
-            if (size == set.length) {
-                resize();
-            } else {
-                set[size++] = array[i];
-            }
-        }
+            add(array[i]);
     }
-    /**
-     * { function to get an element at the index }.
-     *
-     * @param      index  The index
-     *
-     * @return     { returns int }
-     */
+    }
     public int get(final int index) {
         return set[index];
     }
@@ -162,16 +151,24 @@ class Set {
         }
         return fset;
     }
-}
 
-    // public int[][] cartesianProduct(Set a) {
-    //     int[][] farray = new int[10][10];
-    //     for (int i = 0; i < size; i++) {
-    //         for (int j = 0; j < a.length; j++) {
-    //             System.out.println(farray = Array[set[i], a[j]]);
-    //         }
-    //     }
-    // }
+    public int[][] cartesianProduct(final Set items) {
+        int[][] intersection = new int[size * items.size][2];
+        if (size == 0 || items.size == 0) {
+            return null;
+        } else {
+            int k = 0;
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < items.size; j++) {
+                    intersection[k][0] = set[i];
+                    intersection[k][1] = items.set[j];
+                    k++;
+                }
+            }
+            return intersection;
+        }
+    }
+}
 
 /**
  * Solution class for code-eval.
@@ -185,9 +182,11 @@ public final class Solution {
     }
 
     /**
-     * main function to execute test cases.
+     * { function to get an element at the index }.
      *
-     * @param      args  The arguments
+     * @param      index  The index
+     *
+     * @return     { returns int }
      */
     public static int[] intArray(final String s) {
         String input = s;
@@ -201,6 +200,12 @@ public final class Solution {
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
+
+    /**
+     * main function to execute test cases.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // instantiate this set
         Set s = new Set();
@@ -251,18 +256,18 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                // case "cartesianProduct":
-                // s = new Set();
-                // t = new Set();
-                // intArray = intArray(tokens[1]);
-                // //changed from s.add(intArray);
-                // s.add(intArray[1]);
-                // intArray = intArray(tokens[2]);
-                // //changed from t.add(intArray);
-                // t.add(intArray[2]);
-                // System.out.println(Arrays.deepToString
-                // (s.cartesianProduct(t)));
-                // break;
+                case "cartesianProduct":
+                s = new Set();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                //changed from s.add(intArray);
+                s.add(intArray[1]);
+                intArray = intArray(tokens[2]);
+                //changed from t.add(intArray);
+                t.add(intArray[2]);
+                System.out.println(Arrays.deepToString
+                (s.cartesianProduct(t)));
+                break;
                 default:
                 break;
             }
