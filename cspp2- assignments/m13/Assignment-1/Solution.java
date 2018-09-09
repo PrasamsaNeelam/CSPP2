@@ -66,7 +66,7 @@ class Set {
      * @return     { returns boolean }
      */
     public boolean contains(final int item) {
-        for (int i = 0; i < set.length; i++) {
+        for (int i = 0; i < size; i++) {
             if (set[i] == item) {
                 return true;
             }
