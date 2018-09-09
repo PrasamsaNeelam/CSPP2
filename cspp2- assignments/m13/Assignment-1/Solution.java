@@ -124,7 +124,7 @@ class Set {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < set1.size; j++) {
                 if (set[i] == set1.set[j]) {
-                    fset.add(set1.set[j]);
+                    fset.add(set[i]);
                 }
             }
         }
@@ -230,7 +230,6 @@ public final class Solution {
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
                 } else {
-                    //changed from s.add(intArray);
                     s.add(intArray);
                 }
                 break;
@@ -238,17 +237,14 @@ public final class Solution {
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
-                //changed from s.add(intArray);
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
-                //changed from t.add(intArray);
                 t.add(intArray);
                 System.out.println(s.intersection(t));
                 break;
                 case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
-                //changed from s.add(intArray);
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
@@ -257,10 +253,8 @@ public final class Solution {
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
-                //changed from s.add(intArray);
                 s.add(intArray[1]);
                 intArray = intArray(tokens[2]);
-                //changed from t.add(intArray);
                 t.add(intArray[2]);
                 System.out.println(Arrays.deepToString
                 (s.cartesianProduct(t)));
