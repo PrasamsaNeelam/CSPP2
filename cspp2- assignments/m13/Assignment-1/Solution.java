@@ -41,18 +41,7 @@ class Set {
      *
      * @return     { int array from the given string }
      */
-    public int[] intArray(final String s) {
-        String input = s;
-        if (input.equals("[]")) {
-            return new int[0];
-        }
-        if (s.contains("[")) {
-            input = s.substring(1, s.length() - 1);
-        }
-        return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
-    }
+    
     /**
      * { function to resize the set }.
      */
@@ -173,6 +162,7 @@ class Set {
         }
         return fset;
     }
+}
 
     // public int[][] cartesianProduct(Set a) {
     //     int[][] farray = new int[10][10];
@@ -199,7 +189,19 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public void main(final String[] args) {
+    public static int[] intArray(final String s) {
+        String input = s;
+        if (input.equals("[]")) {
+            return new int[0];
+        }
+        if (s.contains("[")) {
+            input = s.substring(1, s.length() - 1);
+        }
+        return Arrays.stream(input.split(","))
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
+    }
+    public static void main(final String[] args) {
         // instantiate this set
         Set s = new Set();
         // code to read the test cases input file
@@ -267,7 +269,7 @@ public final class Solution {
         }
     }
 }
-}
+
 
 
 
