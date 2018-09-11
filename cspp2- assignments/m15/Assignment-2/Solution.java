@@ -29,15 +29,10 @@ class Solution extends Set {
      * @throws     Exception { set empty exception }
      */
     public int last() throws Exception {
-        // if (size() == 0) {
-        //     System.out.println("Set Empty Exception");
-        //     return -1;
-        // } else {
-        try {
-            return get(size() - 1);
-        }
-        catch(Exception e) {
+        if (size() == 0) {
             throw new Exception();
+        } else {
+            return get(size() - 1);
         }
     }
     /**.
