@@ -312,13 +312,13 @@ class List {
      *
      * @return     { returns a list }
      *
-     * @throws     Exception  { throws exception when occured }
+     * @throws     IndexOutOfBoundsException  { throws exception when occured }
      */
-    public List subList(final int start, final int end) throws Exception {
+    public List subList(final int start, final int end) throws IndexOutOfBoundsException {
     // write the logic for subList
         List newlist = new List();
         if (start > end || start < 0 || end < 0 || start == end || end > size) {
-            throw new Exception();
+            throw new IndexOutOfBoundsException();
         } else {
             for (int i = start; i < end; i++) {
                 newlist.add(list[i]);
