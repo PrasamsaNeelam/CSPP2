@@ -29,6 +29,7 @@ class Solution extends Set {
      * @throws     Exception { set empty exception }
      */
     public int last() throws Exception {
+        System.out.println(size()+" size");
         if (size() == 0) {
             throw new Exception();
         } else {
