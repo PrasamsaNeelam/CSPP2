@@ -26,6 +26,9 @@ class InvalidSubsetSelectionException extends Exception {
         super(s);
     }
 }
+/**
+ * Class for solution.
+ */
 class Solution extends Set {
     /**.
      * Function to find the last element in the set
@@ -62,10 +65,11 @@ class Solution extends Set {
      *
      * @param      fromele  The fromele
      * @param      toele    The toele
-     *
+     * @throws  InvalidSubsetSelectionException    exception
      * @return  array
      */
-    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int fromele, final int toele) throws
+    InvalidSubsetSelectionException {
         if (fromele > toele) {
             throw new InvalidSubsetSelectionException("Invalid Arguements to Subset Exception");
         }
@@ -169,9 +173,7 @@ class Solution extends Set {
                     if (subset != null) {
                         System.out.println(subset);
                     }
-                }
-
-                catch (InvalidSubsetSelectionException e) {
+                } catch (InvalidSubsetSelectionException e) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 }
                 break;
