@@ -71,7 +71,7 @@ class Solution extends Set {
     public int[] subSet(final int fromele, final int toele) throws
     InvalidSubsetSelectionException {
         if (fromele > toele) {
-            throw new InvalidSubsetSelectionException (
+            throw new InvalidSubsetSelectionException(
             "Invalid Arguements to Subset Exception");
         }
         int fromindex = getIndex(fromele);
@@ -220,3 +220,4 @@ class Solution extends Set {
         }
     }
 }
+
