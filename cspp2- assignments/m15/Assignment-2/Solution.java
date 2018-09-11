@@ -182,7 +182,7 @@ class Solution extends Set {
             }
             break;
             case "intersection":
-                // s1 = new Set();
+                s1 = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
                 // System.out.println(Arrays.toString(intArray));
@@ -192,7 +192,7 @@ class Solution extends Set {
                 System.out.println(s1.intersection(t));
                 break;
             case "retainAll":
-                // s1 = new Set();
+                s1 = new Set();
                 intArray = intArray(tokens[1]);
                 s1.add(intArray);
                 intArray = intArray(tokens[2]);
