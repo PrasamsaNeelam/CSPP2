@@ -168,7 +168,7 @@ class Solution extends Set {
                 }
             
             catch(InvalidSubsetSelectionException e){
-                System.out.println(e);
+                System.out.println("Invalid Arguements to Subset Exception");
             }
             break;
             case "headSet":
