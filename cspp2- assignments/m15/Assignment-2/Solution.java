@@ -17,7 +17,12 @@ import java.util.Arrays;
  * Date: September 10, 2018
  */
 class InvalidSubsetSelectionException extends Exception {
-    InvalidSubsetSelectionException(String s){
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { string s }
+     */
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
@@ -42,10 +47,12 @@ class Solution extends Set {
      * @param      toele  The toele
      *
      * @return Set of elements upto the required element that is passed as
+     *
+     * @throws  Exception throws exception when required.
      */
-    public int[] headset(final int toele) throws Exception{
-        int[] subset=subSet(get(0), toele);
-        if(subset.length==0){
+    public int[] headset(final int toele) throws Exception {
+        int[] subset = subSet(get(0), toele);
+        if (subset.length == 0) {
             throw new Exception();
         }
         return subset;
@@ -58,8 +65,8 @@ class Solution extends Set {
      *
      * @return  array
      */
-    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException{
-        if(fromele>toele) {
+    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
+        if (fromele > toele) {
             throw new InvalidSubsetSelectionException("Invalid Arguements to Subset Exception");
         }
         int fromindex = getIndex(fromele);
@@ -67,7 +74,7 @@ class Solution extends Set {
         int[] subset = new int[toindex - fromindex];
         int k = 0;
         for (int i = fromindex; i < toindex; i++) {
-                subset[k++] = this.get(i);
+            subset[k++] = this.get(i);
         }
         return subset;
     }
@@ -113,8 +120,8 @@ class Solution extends Set {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
+               .mapToInt(Integer::parseInt)
+               .toArray();
     }
     /**.
      * { function_description }
@@ -139,7 +146,7 @@ class Solution extends Set {
                 break;
             case "contains":
                 System.out.println(s.
-                    contains(Integer.parseInt(tokens[1])));
+                                   contains(Integer.parseInt(tokens[1])));
                 break;
             case "print":
                 System.out.println(s);
@@ -154,33 +161,32 @@ class Solution extends Set {
                 break;
             case "subSet":
                 String[] arrstring = tokens[1].split(",");
-                try{
+                try {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
-                            Integer.parseInt(arrstring[1]));
+                                              Integer.parseInt(arrstring[1]));
                     Set subset = new Set();
                     subset.add(subarray);
                     if (subset != null) {
                         System.out.println(subset);
                     }
                 }
-            
-            catch(InvalidSubsetSelectionException e){
-                System.out.println("Invalid Arguments to Subset Exception");
-            }
-            break;
-            case "headSet":
-            try {
-                int[] headarray = s.headset(Integer.parseInt(tokens[1]));
-                Set headset = new Set();
-                headset.add(headarray);
-                if (headset != null) {
-                    System.out.println(headset);
+
+                catch (InvalidSubsetSelectionException e) {
+                    System.out.println("Invalid Arguments to Subset Exception");
                 }
-            }
-            catch(Exception e){
-                System.out.println("Set Empty Exception");
-            }
-            break;
+                break;
+            case "headSet":
+                try {
+                    int[] headarray = s.headset(Integer.parseInt(tokens[1]));
+                    Set headset = new Set();
+                    headset.add(headarray);
+                    if (headset != null) {
+                        System.out.println(headset);
+                    }
+                } catch (Exception e) {
+                    System.out.println("Set Empty Exception");
+                }
+                break;
             case "intersection":
                 s = new Solution();
                 Solution t = new Solution();
@@ -199,13 +205,12 @@ class Solution extends Set {
                 System.out.println(s.retainAll(intArray));
                 break;
             case "last":
-            try{
-                System.out.println(s.last());
-            }
-            catch(Exception e) {
-                System.out.println("Set Empty Exception");
-            }
-            break;
+                try {
+                    System.out.println(s.last());
+                } catch (Exception e) {
+                    System.out.println("Set Empty Exception");
+                }
+                break;
             default:
                 break;
             }
