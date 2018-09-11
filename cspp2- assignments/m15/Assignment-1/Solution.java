@@ -6,6 +6,12 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+
+class InvalidPositionException extends Exception {
+    InvalidPositionException() {
+        super();
+    }
+}
 /**
  * List of .
  */
@@ -139,9 +145,11 @@ class List {
     /**
      * { function to remove an element in the given index }.
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { throws exception when occured }
      */
-    public void remove(final int index) throws Exception {
+    public void remove(final int index) throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -150,7 +158,7 @@ class List {
             }
             size--;
         } else {
-            throw new Exception();
+            throw new InvalidPositionException();
         }
     }
 
@@ -281,9 +289,8 @@ class List {
                     try {
                         remove(j);
                         j--;
+                    } catch (Exception e) {
 
-                    } catch(Exception e) {
-                        
                     }
                 }
             }
@@ -296,13 +303,16 @@ class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
+    
     /**
      * { function to return the sublist within the given indices }.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
-     * @return     { return value is a list }
+     * @return     { returns a list }
+     *
+     * @throws     Exception  { throws exception when occured }
      */
     public List subList(final int start, final int end) throws Exception {
     // write the logic for subList
@@ -339,6 +349,7 @@ class List {
     * Think about this case and make the method
     * the simpler.
     */
+
     /**
      * { function to clear the items in the index}.
      */
@@ -347,7 +358,13 @@ class List {
         removeAll(list);
         size = 0;
     }
-
+    /**
+     * { function to count no. of occurances of given item }.
+     *
+     * @param      item  The item
+     *
+     * @return     { returns int value }
+     */
     public int count(int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -356,7 +373,7 @@ class List {
             }
         }
         return count;
-    } 
+    }
     /**
      * { main function}.
      *
