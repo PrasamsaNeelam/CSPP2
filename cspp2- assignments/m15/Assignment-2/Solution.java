@@ -29,7 +29,7 @@ class Solution extends Set {
      * @throws     Exception { set empty exception }
      */
     public int last() throws Exception {
-        System.out.println(size()+" size");
+        // System.out.println(size()+" size");
         if (size() == 0) {
             throw new Exception();
         } else {
@@ -122,7 +122,7 @@ class Solution extends Set {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Sortedset s = new Sortedset();
+        Solution s = new Solution();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
