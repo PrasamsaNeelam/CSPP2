@@ -185,6 +185,7 @@ class Solution extends Set {
                 s1 = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
+                System.out.println(Arrays.toString(intArray));
                 s1.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
