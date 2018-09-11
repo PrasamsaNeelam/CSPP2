@@ -123,6 +123,7 @@ class Solution extends Set {
      */
     public static void main(final String[] args) {
         Solution s = new Solution();
+        Set s1 = new Set();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -180,6 +181,22 @@ class Solution extends Set {
                 System.out.println("Set Empty Exception");
             }
             break;
+            case "intersection":
+                s1 = new Set();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s1.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s1.intersection(t));
+                break;
+            case "retainAll":
+                s1 = new Set();
+                intArray = intArray(tokens[1]);
+                s1.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s1.retainAll(intArray));
+                break;
             case "last":
             try{
                 System.out.println(s.last());
