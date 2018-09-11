@@ -153,7 +153,7 @@ class List {
      *
      * @param      index      The index
      *
-     * @throws     InvalidPositionException  { throws inavlid position 
+     * @throws     InvalidPositionException  { throws inavlid position
      * exception when occured }
      */
     public void remove(final int index) throws InvalidPositionException {
@@ -321,7 +321,7 @@ class List {
      *
      * @throws     IndexOutOfBoundsException  { throws exception when occured }
      */
-    public List subList(final int start, final int end) throws 
+    public List subList(final int start, final int end) throws
     IndexOutOfBoundsException {
     // write the logic for subList
         List newlist = new List();
