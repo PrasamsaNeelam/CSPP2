@@ -7,7 +7,13 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Exception for signaling invalid position errors.
+ */
 class InvalidPositionException extends Exception {
+    /**
+     * Constructs the object.
+     */
     InvalidPositionException() {
         super();
     }
@@ -147,7 +153,7 @@ class List {
      *
      * @param      index      The index
      *
-     * @throws     Exception  { throws exception when occured }
+     * @throws     InvalidPositionException  { throws inavlid position exception when occured }
      */
     public void remove(final int index) throws InvalidPositionException {
         // write the logic for remove here. Think about what to do to the size
@@ -303,7 +309,7 @@ class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    
+
     /**
      * { function to return the sublist within the given indices }.
      *
@@ -365,7 +371,7 @@ class List {
      *
      * @return     { returns int value }
      */
-    public int count(int item) {
+    public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -383,10 +389,18 @@ class List {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
+    /**
+     * { main function to perform list operations }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -463,7 +477,7 @@ public class Solution {
                     }
                 break;
                 case "subList":
-                    try{
+                    try {
                         if (tokens.length != 2) {
                         break;
                         }
@@ -474,7 +488,7 @@ public class Solution {
                             System.out.println(object);
                         }
                     }
-                        catch(Exception e) {
+                        catch (IndexOutOfBoundsException e) {
                             System.out.println("Index Out of Bounds Exception");
                         }
                 break;
@@ -494,7 +508,8 @@ public class Solution {
                 break;
                 case "count":
                     if (tokens.length == 2) {
-                        System.out.println(l.count(Integer.parseInt(tokens[1])));
+                        System.out.println(l.count(
+                            Integer.parseInt(tokens[1])));
                     }
                 break;
                 default:
