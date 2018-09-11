@@ -10,8 +10,6 @@ import java.util.Arrays;
  * List of .
  */
 class List {
-    //Implement all the methods mentioned to build a ListADT
-
     /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -74,7 +72,7 @@ class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
         final int twenty = 20;
         list = new int[twenty];
         size = 0;
@@ -143,17 +141,16 @@ class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        try {
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size - 1] = 0;
             size--;
-        } catch(Exception e) {
-            System.out.println("Invalid Position Exception");
+        } else {
+            throw new Exception();
         }
     }
 
@@ -281,12 +278,17 @@ class List {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (list[j] == newArray[i]) {
-                    remove(j);
-                    j--;
+                    try {
+                        remove(j);
+                        j--;
+
+                    } catch(Exception e) {
+                        
+                    }
                 }
             }
         }
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -302,19 +304,17 @@ class List {
      *
      * @return     { return value is a list }
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws Exception {
     // write the logic for subList
         List newlist = new List();
-        /*if (start > end || start < 0 || end < 0 || start == end || end > size)*/ 
-        try {
+        if (start > end || start < 0 || end < 0 || start == end || end > size) {
+            throw new Exception();
+        } else {
             for (int i = start; i < end; i++) {
                 newlist.add(list[i]);
-            }
-            return newlist;          
-        } catch(Exception e) {
-    System.out.println("Index Out of Bounds Exception");
-    return null;
-}
+        }
+        return newlist;
+        }
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -347,13 +347,29 @@ class List {
         removeAll(list);
         size = 0;
     }
+
+    public int count(int item) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                count++;
+            }
+        }
+        return count;
+    } 
     /**
      * { main function}.
      *
      * @param      args  The arguments
      */
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
+    private Solution() {
+
+    }
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -383,8 +399,12 @@ public class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
-                    if (tokens.length == 2) {
+                    try {
+                        if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
+                    }
+                    } catch (Exception e) {
+                        System.out.println("Invalid Position Exception");
                     }
                 break;
                 case "indexOf":
@@ -426,16 +446,21 @@ public class Solution {
                     }
                 break;
                 case "subList":
-                    if (tokens.length != 2) {
+                    try{
+                        if (tokens.length != 2) {
                         break;
+                        }
+                        String[] arrstring3 = tokens[1].split(",");
+                        List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                Integer.parseInt(arrstring3[1]));
+                        if (object != null) {
+                            System.out.println(object);
+                        }
                     }
-                    String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]),
-                            Integer.parseInt(arrstring3[1]));
-                    if (object != null) {
-                        System.out.println(object);
-                    }
-                    break;
+                        catch(Exception e) {
+                            System.out.println("Index Out of Bounds Exception");
+                        }
+                break;
 
                 case "equals":
                     if (tokens.length == 2) {
@@ -449,6 +474,11 @@ public class Solution {
                 break;
                 case "clear":
                     l.clear();
+                break;
+                case "count":
+                    if (tokens.length == 2) {
+                        System.out.println(l.count(Integer.parseInt(tokens[1])));
+                    }
                 break;
                 default:
                 break;
