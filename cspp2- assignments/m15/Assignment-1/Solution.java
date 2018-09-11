@@ -150,6 +150,7 @@ class List {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
+            list[size - 1] = 0;
             size--;
         } catch(Exception e) {
             System.out.println("Invalid Position Exception");
