@@ -21,7 +21,7 @@ class InvalidSubsetSelectionException extends Exception {
         super(s);
     }
 }
-class Sortedset extends Set {
+class Solution extends Set {
     /**.
      * Function to find the last element in the set
      *
