@@ -67,11 +67,15 @@ class BookYourShow {
 	public void printTicket(String movieName, String showDateandTime, String mobileNumber) {
 		Show checkshow = getAShow(movieName, showDateandTime);
 		if (checkshow != null) {
+			int flag = 0;
 			for (int i = 0; i < allPatronscount; i++) {
 				if (allPatrons[i].mobileNumber.equals(mobileNumber)) {
-					System.out.println(mobileNumber + " " + movieName + " " + showDateandTime);
+					flag = 1;
 					break;
 				}
+			}
+			if (flag == 1) {
+				System.out.println(mobileNumber + " " + movieName + " " + showDateandTime);
 			}
 		} else {
 			System.out.println("Invalid");
