@@ -64,7 +64,7 @@ class BookYourShow {
 		}
 	}
 
-	public void printTicket(String mobileNumber, String movieName, String showDateandTime) {
+	public void printTicket(String movieName, String showDateandTime, String mobileNumber) {
 		Show checkshow = getAShow(movieName, showDateandTime);
 		if (checkshow != null) {
 			for (int i = 0; i < allPatronscount; i++) {
