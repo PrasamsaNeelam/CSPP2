@@ -1,38 +1,74 @@
 import java.util.Scanner;
+/**
+ * Class for patron.
+ */
 class Patron {
 	String personName;
 	String mobileNumber;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      personName    The person name
+	 * @param      mobileNumber  The mobile number
+	 */
 	public Patron(String personName, String mobileNumber) {
 		this.personName = personName;
 		this.mobileNumber = mobileNumber;
 	}
 }
+/**
+ * Class for show.
+ */
 class Show {
 	String movieName;
 	String showDateandTime;
 	String[] seats;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      movieName        The movie name
+	 * @param      showDateandTime  The show dateand time
+	 * @param      seats            The seats
+	 */
 	public Show(String movieName, String showDateandTime, String[] seats) {
 		this.movieName = movieName;
 		this.showDateandTime = showDateandTime;
 		this.seats = seats;
 	}
 }
-
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
 	public Show[] allshows;
 	public int allshowscount;
 	public Patron[] allPatrons;
 	public int allPatronscount;
-
+	/**
+	 * Constructs the object.
+	 */
 	public BookYourShow() {
 		allshows = new Show[20];
 		allshowscount = 0;
 		allPatrons = new Patron[20];
 		allPatronscount = 0;
 	}
+	/**
+	 * Adds a show.
+	 *
+	 * @param      show  The show
+	 */
 	public void addAShow(Show show) {
 		allshows[allshowscount++] = show;
 	}
+	/**
+	 * Gets a show.
+	 *
+	 * @param      movieName        The movie name
+	 * @param      showDateandTime  The show dateand time
+	 *
+	 * @return     A show.
+	 */
 	public Show getAShow(String movieName, String showDateandTime) {
 		for (int i = 0; i < allshowscount; i++) {
 			if (allshows[i].movieName.equals(movieName) && allshows[i].showDateandTime.equals(showDateandTime)) {
@@ -41,6 +77,14 @@ class BookYourShow {
 		}
 		return null;
 	}
+	/**
+	 * { Books a show }.
+	 *
+	 * @param      movieName        The movie name
+	 * @param      showDateandTime  The show dateand time
+	 * @param      pa               { Patron details }
+	 * @param      seats            The seats
+	 */
 	public void bookAShow(String movieName, String showDateandTime, Patron pa, String[] seats) {
 		Show checkshow = getAShow(movieName, showDateandTime);
 		if (allshowscount == 0) {
@@ -69,7 +113,13 @@ class BookYourShow {
 		}
 		}
 	}
-
+	/**
+	 * { Prints the ticket }.
+	 *
+	 * @param      movieName        The movie name
+	 * @param      showDateandTime  The show dateand time
+	 * @param      mobileNumber     The mobile number
+	 */
 	public void printTicket(String movieName, String showDateandTime, String mobileNumber) {
 		Show checkshow = getAShow(movieName, showDateandTime);
 		if (checkshow != null) {
@@ -89,7 +139,9 @@ class BookYourShow {
 			System.out.println("Invalid");
 		}
     }
-
+    /**
+     * Shows all.
+     */
 	public void	showAll() {
 		for (int i = 0; i < allshowscount; i++) {
 			String str = allshows[i].movieName + "," + allshows[i].showDateandTime + ",";
@@ -106,7 +158,9 @@ class BookYourShow {
 		}
 	}
 }
-
+/**
+ * { Final class solution }
+ */
 public final class Solution {
     /**
      * Constructs the object.
