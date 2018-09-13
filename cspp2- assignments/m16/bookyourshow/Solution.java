@@ -96,7 +96,7 @@ class BookYourShow {
 			String str1 = "[";
 			for (int j = 0; j < allshows[i].seats.length; j++) {
 				str1 += allshows[i].seats[j];
-				if (i < allshows[i].seats.length - 1) {
+				if (j < allshows[i].seats.length - 1) {
 					str1 += ",";
 				}
 			}
