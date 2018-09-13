@@ -45,8 +45,8 @@ class BookYourShow {
 		Show checkshow = getAShow(movieName, showDateandTime);
 		if (allshowscount == 0) {
 			System.out.println("No show");
-		}
-		if (checkshow != null) {
+		} else {
+			if (checkshow != null) {
 			int flag = 0;
 			for (int i = 0; i < seats.length; i++) {
 				for (int j = 0; j < checkshow.seats.length; j++) {
@@ -66,6 +66,7 @@ class BookYourShow {
 			}
 		} else {
 			System.out.println("No show");
+		}
 		}
 	}
 
