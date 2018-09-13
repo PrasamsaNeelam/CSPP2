@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * { Final class solution }
+ * { Final class solution }.
  */
 public final class Solution {
     /**
@@ -45,7 +45,8 @@ public final class Solution {
                 case "get":
                     Show show = bys.getAShow(check[1], tokens[1]);
                     if (show != null) {
-                       System.out.println(show.movieName + "," + show.showDateandTime);
+                       System.out.println(show.movieName + "," +
+                        show.showDateandTime);
                     } else {
                         System.out.println("No show");
                     }
