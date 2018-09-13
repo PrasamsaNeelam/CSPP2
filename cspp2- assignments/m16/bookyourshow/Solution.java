@@ -4,20 +4,17 @@ import java.util.Scanner;
  */
 class Patron {
     /**
-     * { declaring person name }.
+     * { var_description }
      */
-    public String personName;
-    /**
-     * { declaring mobile number }.
-     */
-    public String mobileNumber;
+    String personName;
+    String mobileNumber;
     /**
      * Constructs the object.
      *
      * @param      personName    The person name
      * @param      mobileNumber  The mobile number
      */
-    Patron(final String personName, final String mobileNumber) {
+    public Patron(String personName, String mobileNumber) {
         this.personName = personName;
         this.mobileNumber = mobileNumber;
     }
