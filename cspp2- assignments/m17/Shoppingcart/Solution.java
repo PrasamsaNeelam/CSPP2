@@ -120,10 +120,12 @@ class ShoppingCart {
 	}
 
 	public void applyCoupon(String coupon) {
-		if ((coupon.equals("IND10")) || (coupon.equals("IND20")) || (coupon.equals("IND30")) || (coupon.equals("IND50"))) {
+		if (this.discount == 0.0) {
+			if ((coupon.equals("IND10")) || (coupon.equals("IND20")) || (coupon.equals("IND30")) || (coupon.equals("IND50"))) {
 			this.discount = Double.parseDouble(coupon.substring(3, coupon.length()));
-		} else {
-			System.out.println("Invalid coupon");
+			} else {
+				System.out.println("Invalid coupon");
+			}
 		}
 	}
 	public void printInvoice() {
