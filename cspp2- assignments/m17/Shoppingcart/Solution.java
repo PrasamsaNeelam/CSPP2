@@ -131,7 +131,7 @@ class ShoppingCart {
 		for (int i = 0; i < cartcount; i++) {
 			for (int j = 0; j < catalogcount; j++) {
 				if (cart[i].getProductName().equals(catalog[j].getProductName())) {
-					System.out.println(cart[i].getProductName() + " " + cart[i].getQuantity() + " " + cart[i].getUnitPrice());
+					System.out.println(cart[i].getProductName() + " " + cart[i].getQuantity() + " " + catalog[j].getUnitPrice());
 				}
 			}
 		}
