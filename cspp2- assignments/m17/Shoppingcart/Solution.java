@@ -23,7 +23,8 @@ public final class Solution {
             switch (tokens[0]) {
                 case "Item":
                 String[] data = tokens[1].split(",");
-                scart.addToCatalog(new Item(data[0], Integer.parseInt(data[1]), Double.parseDouble(data[2])));
+                scart.addToCatalog(new Item(data[0], Integer.parseInt(data[1]),
+                    Double.parseDouble(data[2])));
                 break;
                 case "catalog":
                 scart.showCatalog();
@@ -43,7 +44,7 @@ public final class Solution {
                 scart.removeFromCart(new Item(data[0], Integer.parseInt(data[1])));
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount:" + " " +scart.getPayableAmount());
+                System.out.println("Payable amount:" + " " + scart.getPayableAmount());
                 break;
                 case "coupon":
                 scart.applyCoupon(tokens[1]);
