@@ -37,14 +37,17 @@ public final class Solution {
                 scart.showCart();
                 break;
                 case "totalAmount":
-                System.out.println("totalAmount:" + " " + scart.getTotalAmount());
+                System.out.println("totalAmount:" + " " +
+                    scart.getTotalAmount());
                 break;
                 case "remove":
                 data = tokens[1].split(",");
-                scart.removeFromCart(new Item(data[0], Integer.parseInt(data[1])));
+                scart.removeFromCart(new Item(data[0],
+                    Integer.parseInt(data[1])));
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount:" + " " + scart.getPayableAmount());
+                System.out.println("Payable amount:" + " " +
+                    scart.getPayableAmount());
                 break;
                 case "coupon":
                 scart.applyCoupon(tokens[1]);
