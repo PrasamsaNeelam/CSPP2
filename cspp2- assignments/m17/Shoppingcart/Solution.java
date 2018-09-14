@@ -127,7 +127,7 @@ class ShoppingCart {
 		}
 	}
 	public void printInvoice() {
-		System.out.println("Name quantity Price");
+		System.out.println("Name   quantity   Price");
 		for (int i = 0; i < cartcount; i++) {
 			for (int j = 0; j < catalogcount; j++) {
 				if (cart[i].getProductName().equals(catalog[j].getProductName())) {
@@ -136,8 +136,8 @@ class ShoppingCart {
 			}
 		}
 		System.out.println("Total:" + getTotalAmount());
-		System.out.println("Disc%" + (getTotalAmount() / 100) * discount);
-		System.out.println("Tax" + getTotalAmount() * 0.15);
+		System.out.println("Disc%:" + (getTotalAmount() / 100) * discount);
+		System.out.println("Tax:" + getTotalAmount() * 0.15);
 		System.out.println("Payable amount:" + getPayableAmount());
 	}
 }
