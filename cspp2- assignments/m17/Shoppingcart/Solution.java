@@ -178,6 +178,7 @@ public class Solution {
 				break;
 				case "coupon":
 				scart.applyCoupon(tokens[1]);
+				break;
 				case "print":
 				scart.printInvoice();
 				break;
