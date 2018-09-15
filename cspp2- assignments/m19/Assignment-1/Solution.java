@@ -63,13 +63,13 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner sc, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         System.out.println(questionCount + " are added to the quiz");
         for ( int i = 0; i < questionCount; i++) {
-            String line = sc.nextLine();
+            String line = s.nextLine();
             String[] data = line.split(":");
             String[] token = data[1].split(",");
             System.out.println(data[0] + "(" + data[3] + ")");
@@ -86,7 +86,7 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner sc1, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -100,12 +100,12 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        // Scanner s = new Scanner(System.in);
-        // String line = s.nextLine();
-        // String[] tokens = line.split(":");
-        // System.out.println(tokens[0]);
-        // if (quiz.equals(tokens[3]) {
-        //     System.out.println("");
-        // }
+        Scanner s = new Scanner(System.in);
+        String line = s.nextLine();
+        String[] tokens = line.split(":");
+        System.out.println(tokens[0]);
+        if (quiz.equals(tokens[3])) {
+            System.out.println("");
+        }
     }
 }
