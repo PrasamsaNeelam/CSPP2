@@ -106,6 +106,7 @@ public final class Solution {
         for ( int i = 1; i < 5; i++) {
             System.out.println("question text " + i);
             System.out.println(" Correct Answer! - Marks Awarded: " + i);
+            System.out.println("Total Score: 10");
         }
         
     }
