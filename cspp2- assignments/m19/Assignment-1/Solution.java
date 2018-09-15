@@ -39,9 +39,9 @@ public final class Solution {
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
-                System.out.println("|------------|");
-                System.out.println("| Start Quiz |");
-                System.out.println("|------------|");
+                // System.out.println("|------------|");
+                // System.out.println("| Start Quiz |");
+                // System.out.println("|------------|");
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "SCORE_REPORT":
@@ -68,6 +68,9 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         System.out.println(questionCount + " are added to the quiz");
+        System.out.println("|------------|");
+        System.out.println("| Start Quiz |");
+        System.out.println("|------------|");
         for ( int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String[] data = line.split(":");
