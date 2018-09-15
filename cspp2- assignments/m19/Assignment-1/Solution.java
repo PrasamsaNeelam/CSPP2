@@ -1,10 +1,16 @@
 import java.util.Scanner;
 class Quiz {
-    int questionCount;
-    int answerCount;
+    private int questionCount;
+    private int answerCount;
     Quiz() {
         questionCount = 0;
         answerCount = 0;
+    }
+    public int getQuestionCount() {
+        return questionCount;
+    }
+    public int getAnswerCount() {
+        return answerCount;
     }
 }
 /**
@@ -106,10 +112,5 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-        for ( int i = 1; i < 5; i++) {
-            System.out.println("question text " + i);
-            System.out.println(" Correct Answer! - Marks Awarded: " + i);
-        }
-        System.out.println("Total Score: 10");
     }
 }
