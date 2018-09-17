@@ -248,14 +248,12 @@ public final class Solution {
         String lines = scan.nextLine();
         String[] tokens = lines.split(":");
         String[] choices = tokens[1].split(",");
-        if (!(Integer.parseInt(tokens[2]) < 5 && Integer.parseInt(tokens[2]) > 0)) {
-            System.out.println("Error! Correct answer choice number is out of range for question text 1");
-        } 
         if (q <= 0) {
             System.out.println("Quiz does not have questions");
+        } else if (!(Integer.parseInt(tokens[2]) < 5 && Integer.parseInt(tokens[2]) > 0)) {
+            System.out.println("Error! Correct answer choice number is out of range for question text 1");
         } else {
             System.out.println(q + " are added to the quiz");
-
         }
     }
     /**
