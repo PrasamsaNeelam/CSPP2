@@ -186,10 +186,10 @@ class Quiz {
         int total=0;
         for(int i=0;i<size;i++) {
             if(questions[i].evaluateResponse(questions[i].getResponse())) {
-                s +=questions[i].getQuestionText()+"\n"+" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks();
+                s +=questions[i].getQuestionText()+"\n"+" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks()+"\n";
                 total += questions[i].getMaxMarks();
             } else {
-                s +=questions[i].getQuestionText()+"\n"+ " Wrong Answer! - Penalty: "+questions[i].getPenalty();
+                s +=questions[i].getQuestionText()+"\n"+ " Wrong Answer! - Penalty: "+questions[i].getPenalty()+"\n";
                 total += questions[i].getPenalty();
             }
         }
