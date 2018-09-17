@@ -154,6 +154,8 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
+        questions = new Question[onehundred];
+        size=0;
 
     }
     /**
@@ -191,6 +193,7 @@ class Quiz {
                 total += questions[i].getPenalty();
             }
         }
+        System.out.println(s);
         if(size!=0) {
             System.out.println("Total Score: "+total);
         }
