@@ -250,11 +250,14 @@ public final class Solution {
         String[] choices = tokens[1].split(",");
         if (q <= 0) {
             System.out.println("Quiz does not have questions");
-        } else if (tokens[0] == "" || tokens[1] == "" || tokens[2] == "" || tokens[3] == "" || tokens[4] == "") {
+        } else if (tokens.length != 5) {
             System.out.println("Error! Malformed question");
         } else if (!(Integer.parseInt(tokens[2]) < 5 && Integer.parseInt(tokens[2]) > 0)) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
-        } else {
+        } else if (choices.length != 4) {
+            System.out.println("trick question  does not have enough answer choices");
+        }
+        else {
             System.out.println(q + " are added to the quiz");
         }
     }
