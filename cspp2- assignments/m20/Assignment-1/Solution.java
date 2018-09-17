@@ -44,12 +44,12 @@ class Question {
      */
     Question(final String question1, final String[] choices1,
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
-    	this.questiontext = question1;
-    	this.choices = choices1;
-    	this.correctAnswer = correctAnswer1;
-    	this.maxMarks = maxMarks1;
-    	this.penalty = penalty1;
-    	this.response = "";
+        this.questiontext = question1;
+        this.choices = choices1;
+        this.correctAnswer = correctAnswer1;
+        this.maxMarks = maxMarks1;
+        this.penalty = penalty1;
+        this.response = "";
     }
     /**
      * { function to evaluate response }.
@@ -59,9 +59,9 @@ class Question {
      * @return     { returns boolean }
      */
     public boolean evaluateResponse(final String choice) {
-    	// if (choice.equals()) {
-    	// 	return true;
-    	// }
+        // if (choice.equals()) {
+        //  return true;
+        // }
     return false;
     }
     /**
@@ -110,7 +110,7 @@ class Question {
      * @param      answer  The answer
      */
     public void setResponse(final String answer) {
-    	//this.correctAnswer = answer;
+        //this.correctAnswer = answer;
     }
     /**
      * Gets the response.
@@ -245,10 +245,15 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if (q <= 0) {
-        	System.out.println("Quiz does not have questions");
+        String lines = scan.nextLine();
+        String[] tokens = lines.split(":");
+        String[] choices = tokens[1].split(",");
+        if (!(Integer.parseInt(tokens[2]) < 5 && Integer.parseInt(tokens[2]) > 0)) {
+            System.out.println("Error! Correct answer choice number is out of range for question text 1");
+        } else if (q <= 0) {
+            System.out.println("Quiz does not have questions");
         } else {
-        	System.out.println(q + " are added to the quiz");
+            System.out.println(q + " are added to the quiz");
 
         }
     }
