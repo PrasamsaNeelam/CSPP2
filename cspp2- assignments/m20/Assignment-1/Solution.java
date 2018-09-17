@@ -250,7 +250,8 @@ public final class Solution {
         String[] choices = tokens[1].split(",");
         if (!(Integer.parseInt(tokens[2]) < 5 && Integer.parseInt(tokens[2]) > 0)) {
             System.out.println("Error! Correct answer choice number is out of range for question text 1");
-        } else if (q <= 0) {
+        } 
+        if (q <= 0) {
             System.out.println("Quiz does not have questions");
         } else {
             System.out.println(q + " are added to the quiz");
