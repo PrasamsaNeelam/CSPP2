@@ -1,5 +1,5 @@
 /**
- * Author : Pranay Kumar Y
+ * Author : Prasamsa
  * Date : 17th September,2018.
  */
 import java.util.Scanner;
