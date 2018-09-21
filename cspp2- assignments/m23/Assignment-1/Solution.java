@@ -24,7 +24,7 @@ class Solution {
 			int index1 = -1;
 			int index2 = -1;
 			for (int i = 0;i < files.length; i++) {
-				System.out.print("\t\t" + files[i]);
+				System.out.print("\t " + files[i]);
 			} 
 			System.out.println();
 			for (int i = 0; i < files.length; i++) {
