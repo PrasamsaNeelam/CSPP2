@@ -30,23 +30,26 @@ final class Solution {
 			int[][] array = new int[files.length][files.length];
 			for (int i = 0; i < files.length; i++) {
 				for (int j = 0; j < files.length; j++) {
-					TreeMap<String, Integer> file1 = dictionary(new Scanner(new FileReader(testfile1 + "\\" + files[i])));
-					TreeMap<String, Integer> file2 = dictionary(new Scanner(new FileReader(testfile1 + "\\" + files[j])));
+					TreeMap<String, Integer> file1 = dictionary(new Scanner(
+						new FileReader(testfile1 + "\\" + files[i])));
+					TreeMap<String, Integer> file2 = dictionary(new Scanner(
+						new FileReader(testfile1 + "\\" + files[j])));
 					array[i][j] = calculation(file1, file2);
 				}
 			}
+			int hundred = 100;
 			int max = 0;
 			int index1 = -1;
 			int index2 = -1;
-			for (int i = 0;i < files.length; i++) {
+			for (int i = 0; i < files.length; i++) {
 				System.out.print("\t " + files[i]);
-			} 
+			}
 			System.out.println();
 			for (int i = 0; i < files.length; i++) {
 				System.out.print(files[i] + "\t");
 				for (int j = 0; j < files.length; j++) {
 					System.out.print(array[i][j] + "\t\t");
-					if (array[i][j] < 100 && array[i][j] > max) {
+					if (array[i][j] < hundred && array[i][j] > max) {
 						max = array[i][j];
 						index1 = i;
 						index2 = j;
@@ -54,20 +57,20 @@ final class Solution {
 				}
 			System.out.println();
 			}
-			System.out.println("Maximum similarity is between " );
+			System.out.println("Maximum similarity is between ");
 		} catch (Exception e) {
 			System.out.println("empty directory");
 		}
 	}
 	/**
-	 * { function to calculate }
+	 * { function to calculate }.
 	 *
 	 * @param      dict1  The dictionary 1
 	 * @param      dict2  The dictionary 2
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	static int calculation(TreeMap<String, Integer> dict1, TreeMap<String, Integer> dict2) {
+	static int calculation(final TreeMap<String, Integer> dict1, final TreeMap<String, Integer> dict2) {
 		double num = 0.0;
 		double denom1 = 0.0;
 		double denom2 = 0.0;
@@ -95,7 +98,7 @@ final class Solution {
 	 *
 	 * @return     { returns dictionary }
 	 */
-	public static TreeMap<String, Integer> dictionary(Scanner s1) {
+	public static TreeMap<String, Integer> dictionary(final Scanner s1) {
 		TreeMap<String, Integer> dict1 = new TreeMap<>();
 		while (s1.hasNext()) {
 			String str = s1.nextLine().replaceAll("[0-9_]", "");
