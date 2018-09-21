@@ -30,7 +30,7 @@ class Solution {
 			for (int i = 0; i < files.length; i++) {
 				System.out.print(files[i] + "\t");
 				for (int j = 0; j < files.length; j++) {
-					System.out.print(array[i][j] + "\t");
+					System.out.print(array[i][j] + "\t\t");
 					if (array[i][j] < 100 && array[i][j] > max) {
 						max = array[i][j];
 						index1 = i;
