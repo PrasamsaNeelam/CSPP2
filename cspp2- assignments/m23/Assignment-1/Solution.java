@@ -28,7 +28,6 @@ class Solution {
 			} 
 			System.out.println();
 			for (int i = 0; i < files.length; i++) {
-				System.out.println("  ");
 				System.out.print(files[i] + "\t");
 				for (int j = 0; j < files.length; j++) {
 					System.out.print(array[i][j] + "\t\t");
