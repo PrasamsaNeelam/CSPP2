@@ -20,21 +20,30 @@ class Solution {
 					array[i][j] = calculation(file1, file2);
 				}
 			}
+			int max = 0;
+			int index1 = -1;
+			int index2 = -1;
 			for (int i = 0;i < files.length; i++) {
-				System.out.print("\t" + files[i]);
+				System.out.print("\t\t" + files[i]);
 			} 
 			System.out.println();
 			for (int i = 0; i < files.length; i++) {
 				System.out.print(files[i] + "\t");
 				for (int j = 0; j < files.length; j++) {
 					System.out.print(array[i][j] + "\t");
+					if (array[i][j] < 100 && array[i][j] > max) {
+						max = array[i][j];
+						index1 = i;
+						index2 = j;
+					}
 				}
 			System.out.println();
 			}
+			System.out.println("Maximum similarity is between " );
 		} catch (Exception e) {
 			System.out.println("empty directory");
 		}
-			}
+	}
 	static int calculation(TreeMap<String, Integer> dict1, TreeMap<String, Integer> dict2) {
 		double num = 0.0;
 		double denom1 = 0.0;
