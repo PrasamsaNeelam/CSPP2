@@ -1,9 +1,24 @@
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.Arrays;
-import java.io.*;
-class Solution {
-	public static void main(String[] args) {
+import java.io.FileReader;
+import java.io.File;
+/**
+ * Class for solution.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
+
+	}
+	/**
+	 * { main function to drive the program }.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		// TreeMap<String, Integer> dict1 = new TreeMap<>();
 		// TreeMap<String, Integer> dict2 = new TreeMap<>();
 		try {
@@ -44,12 +59,19 @@ class Solution {
 			System.out.println("empty directory");
 		}
 	}
+	/**
+	 * { function to calculate }
+	 *
+	 * @param      dict1  The dictionary 1
+	 * @param      dict2  The dictionary 2
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	static int calculation(TreeMap<String, Integer> dict1, TreeMap<String, Integer> dict2) {
 		double num = 0.0;
 		double denom1 = 0.0;
 		double denom2 = 0.0;
 		double result = 0.0;
-		//num = dotproduct= dict1(value) * dict2(value)
 		for (String key : dict1.keySet()) {
 			if (dict2.containsKey(key)) {
 				num += (dict1.get(key) * dict2.get(key));
@@ -66,6 +88,13 @@ class Solution {
 		result = num / (Math.sqrt(denom1) * Math.sqrt(denom2));
 		return (int) (result * 100);
 	}
+	/**
+	 * { function to retrieve the dictionary }.
+	 *
+	 * @param      s1    The s 1
+	 *
+	 * @return     { returns dictionary }
+	 */
 	public static TreeMap<String, Integer> dictionary(Scanner s1) {
 		TreeMap<String, Integer> dict1 = new TreeMap<>();
 		while (s1.hasNext()) {
