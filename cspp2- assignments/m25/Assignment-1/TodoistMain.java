@@ -35,7 +35,11 @@ class Task {
 		this.status = status;
 	}
 	public String toString() {
-		String str = title + ", " + assignedTo + ", " + timeToComplete + ", " + important + ", " + urgent + ", " + status;
+		String imp = "Not Important";
+		String urg = "Not Urgent";
+		if (important) imp = "Important";
+		if (urgent) urg = "Urgent"; 
+		String str = title + ", " + assignedTo + ", " + timeToComplete + ", " + imp + ", " + urg + ", " + status;
 		return str;
 	}
 }
