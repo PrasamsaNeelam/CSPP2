@@ -34,9 +34,9 @@ class Task {
 		this.important = important1;
 		this.urgent = urgent1;
 		this.status = status1;
-	// 	if (title.equals("") || title.equals(null)) {
- //      		throw new Exception("Title not provided");
- //      	}
+		if (title.equals("") || title.equals(null)) {
+      		throw new Exception("Title not provided");
+       	}
 	// 	if (!(status.equals("done") && status.equals("todo"))) {
 	// 		throw new Exception("Invalid status dud");
 	// 	}
