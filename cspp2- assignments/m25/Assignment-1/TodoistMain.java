@@ -26,13 +26,22 @@ class Task {
 	 * @param      urgent          The urgent
 	 * @param      status          The status
 	 */
-	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
+	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
 		this.title = title;
 		this.assignedTo = assignedTo;
 		this.timeToComplete = timeToComplete;
 		this.important = important;
 		this.urgent = urgent;
 		this.status = status;
+		if (title.equals("") || title.equals(null)) {
+			new Exception("Title not provided");
+		}
+		if (status != "done" || status != "todo") {
+			new Exception("Invalid status dud");
+		}
+		if (timeToComplete < 0) {
+			new Exception("Invalid timeToComplete" + timeToComplete);
+		}
 	}
 	public String toString() {
 		String imp = "Not Important";
@@ -145,7 +154,7 @@ public class TodoistMain {
 		boolean urgent = tokens[5].equals("y");
 		String status = tokens[6];
 		return new Task(
-		           title, assignedTo, timeToComplete, important, urgent, status);
+				   title, assignedTo, timeToComplete, important, urgent, status);
 	}
 
 	/**
