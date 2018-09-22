@@ -35,7 +35,7 @@ class Task {
 		this.status = status;
 		if (title.equals("") || title.equals(null)) throw
 			new Exception("Title not provided");
-		if (status != "done" || status != "todo") throw
+		if (!(status.equals("done") && status.equals("todo"))) throw
 			new Exception("Invalid status dud");
 		if (timeToComplete < 0) throw
 			new Exception("Invalid timeToComplete" + timeToComplete);
