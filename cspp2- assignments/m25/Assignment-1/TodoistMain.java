@@ -33,15 +33,12 @@ class Task {
 		this.important = important;
 		this.urgent = urgent;
 		this.status = status;
-		if (title.equals("") || title.equals(null)) {
+		if (title.equals("") || title.equals(null)) throw
 			new Exception("Title not provided");
-		}
-		if (status != "done" || status != "todo") {
+		if (status != "done" || status != "todo") throw
 			new Exception("Invalid status dud");
-		}
-		if (timeToComplete < 0) {
+		if (timeToComplete < 0) throw
 			new Exception("Invalid timeToComplete" + timeToComplete);
-		}
 	}
 	public String toString() {
 		String imp = "Not Important";
