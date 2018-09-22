@@ -25,21 +25,25 @@ class Task {
 	 * @param      important       The important
 	 * @param      urgent          The urgent
 	 * @param      status          The status
+	 * @throws     exception       The exception
 	 */
-	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) throws Exception {
-		this.title = title;
-		this.assignedTo = assignedTo;
-		this.timeToComplete = timeToComplete;
-		this.important = important;
-		this.urgent = urgent;
-		this.status = status;
-		if (title.equals("") || title.equals(null)) throw
-			new Exception("Title not provided");
-		if (!(status.equals("done") && status.equals("todo"))) throw
-			new Exception("Invalid status dud");
-		if (timeToComplete < 0) throw
-			new Exception("Invalid timeToComplete" + timeToComplete);
-	}
+	Task(final String title1, final String assignedTo1, final int timeToComplete1, final boolean important1, final boolean urgent1, final String status1) throws Exception {
+		this.title = title1;
+		this.assignedTo = assignedTo1;
+		this.timeToComplete = timeToComplete1;
+		this.important = important1;
+		this.urgent = urgent1;
+		this.status = status1;
+	// 	if (title.equals("") || title.equals(null)) {
+ //      		throw new Exception("Title not provided");
+ //      	}
+	// 	if (!(status.equals("done") && status.equals("todo"))) {
+	// 		throw new Exception("Invalid status dud");
+	// 	}
+	// 	if (timeToComplete < 0) {
+	// 		throw new Exception("Invalid timeToComplete" + timeToComplete);
+	// }
+}
 	public String toString() {
 		String imp = "Not Important";
 		String urg = "Not Urgent";
