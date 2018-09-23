@@ -49,7 +49,7 @@ public final  class Solution {
                 System.out.println();
 
             }
-            System.out.println("max similarity is between "
+            System.out.println("Maximum similarity is between "
                                + firstfile + " " + "and" + " " + secondfile);
         } catch (Exception e) {
             System.out.println("Empty Directory");
