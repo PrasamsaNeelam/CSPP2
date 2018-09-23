@@ -37,7 +37,8 @@ public final  class Solution {
                     SubString1 obj = new SubString1();
                     double res = obj.plagerism(text[i], text[j]);
 
-                    if (res > max && !text[i].getName().equals(text[j].getName())) {
+                    if (res > max && !text[i].getName().equals(
+                        text[j].getName())) {
                         max = res;
                         firstfile = text[i].getName();
                         secondfile = text[j].getName();
