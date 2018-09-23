@@ -28,22 +28,24 @@ class Task {
 	 * @throws     exception       The exception
 	 */
 	Task(final String title1, final String assignedTo1, final int timeToComplete1, final boolean important1, final boolean urgent1, final String status1) throws Exception {
-		this.title = title1;
-		this.assignedTo = assignedTo1;
-		this.timeToComplete = timeToComplete1;
-		this.important = important1;
-		this.urgent = urgent1;
-		this.status = status1;
-		// if (!(status.equals("done") && status.equals("todo"))) {
-		// throw new Exception("Invalid status dud");
-	 //    }
 		if (title.equals("") || title.equals(null)) {
       		throw new Exception("Title not provided");
+       	} else {
+       		this.title = title1;
        	}
-	
+		this.assignedTo = assignedTo1;
 		if (timeToComplete < 0) {
 			throw new Exception("Invalid timeToComplete" + timeToComplete);
-	}
+		} else {
+			this.timeToComplete = timeToComplete1;
+		}
+		this.important = important1;
+		this.urgent = urgent1;
+		if (!(status.equals("done") && status.equals("todo"))) {
+		throw new Exception("Invalid status dud");
+	    } else {
+	    	this.status = status1;
+	    }
 }
 	public String toString() {
 		String imp = "Not Important";
@@ -76,6 +78,9 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
+	TodoistMain() {
+
+	}
 
 	/**
 	 * Starts a test.
